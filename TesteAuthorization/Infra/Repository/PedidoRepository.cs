@@ -10,29 +10,12 @@ using System.Data.Entity;
 
 namespace Interface.Infra.Repository
 {
-    public class PedidoRepository : IDisposable
+    public class PedidoRepository : GenericRepository<Pedido>
     {
-        private Model _entities;
-
-
-        public PedidoRepository()
-        {
-            _entities = new Model();
-        }
-
-        public void Add(Pedido db)
-        {
-            _entities.Pedido.Add(db);
-        }
 
         public IQueryable<Pedido> GetById(int id)
         {
             return _entities.Pedido.Include(x => x.PedidoItens).Where(x => x.Id == id);
-        }
-
-        public void Dispose()
-        {
-            _entities.Dispose();
         }
     }
 }

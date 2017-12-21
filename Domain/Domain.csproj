@@ -48,7 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\AdicionarCarrinhoDto.cs" />
     <Compile Include="Dto\CarrinhoDto.cs" />
+    <Compile Include="Dto\ClienteDto.cs" />
+    <Compile Include="Dto\PedidoDto.cs" />
     <Compile Include="Dto\ProdutoDto.cs" />
     <Compile Include="Models\Carrinho.cs" />
     <Compile Include="Models\CarrinhoItens.cs" />

@@ -6,7 +6,7 @@ namespace Interface.Infra
     using System.Linq;
     using Domain.Models;
 
-    public partial class Model : DbContext
+    public partial class Model : DbContext, IDisposable
     {
         public Model()
             : base("name=AuthContext")

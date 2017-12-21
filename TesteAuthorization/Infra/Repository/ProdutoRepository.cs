@@ -9,29 +9,12 @@ using System.Web;
 
 namespace Interface.Infra.Repository
 {
-    public class ProdutoRepository : IDisposable
+    public class ProdutoRepository : GenericRepository<Produto>
     {
-        private Model _entities;
-
-
-        public ProdutoRepository()
-        {
-            _entities = new Model();
-        }
-
-        public List<Produto> GetAll()
-        {
-            return _entities.Produto.ToList();
-        }
 
         public IQueryable<Produto> GetById(int id)
         {
             return _entities.Produto.Where(x => x.Id == id);
-        }
-
-        public void Dispose()
-        {
-            _entities.Dispose();
         }
     }
 }

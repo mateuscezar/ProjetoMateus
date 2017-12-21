@@ -6,68 +6,27 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using Interface.Infra.Repository;
+using Interface.Service;
 
 namespace Interface.Controllers
 {
     [RoutePrefix("Carrinho")]
     public class CarrinhoController : ApiController
     {
-        private CarrinhoRepository _repositoryCarrinho = null;
-        private ClienteRepository _repositoryCliente = null;
-        private ProdutoRepository _repositoryProduto = null;
-        private PedidoRepository _repositoryPedido = null;
+        private CarrinhoApplicationService _appService = null;
 
         public CarrinhoController()
         {
-            _repositoryCarrinho = new CarrinhoRepository();
-            _repositoryCliente = new ClienteRepository();
-            _repositoryProduto = new ProdutoRepository();
-            _repositoryPedido = new PedidoRepository();
+            _appService = new CarrinhoApplicationService();
         }
 
 
-        //[Authorize]
+        [Authorize]
         [Route("Adicionar")]
         [HttpPost]
-        public IHttpActionResult AdicionarProduto(CarrinhoDto dto)
+        public IHttpActionResult AdicionarProduto(AdicionarCarrinhoDto dto)
         {
-            var cliente = _repositoryCliente.GetById(dto.IdCliente).FirstOrDefault();
-
-            if (cliente == null)
-                throw new Exception("Cliente inválido.");
-
-
-            var carrinho = _repositoryCarrinho.GetByIdCliente(dto.IdCliente).FirstOrDefault();
-
-            if (carrinho == null)
-            {
-                carrinho = new Carrinho
-                {
-                    Cliente = cliente,
-                    DataCadastro = DateTime.Now,
-                    CarrinhoItens = new List<CarrinhoItens>()
-                };
-            }
-
-            var produto = _repositoryProduto.GetById(dto.Produto.IdProduto).FirstOrDefault();
-
-            if (produto == null)
-                throw new Exception("Produto inválido.");
-
-            CarrinhoItens item = new CarrinhoItens
-            {
-                Produto = produto,
-                Carrinho = carrinho,
-                Pedido = null,
-                DataCadastro = DateTime.Now,
-                Quantidade = dto.Produto.Quantidade,
-                ValorUnitario = produto.Preco,
-                ValorTotalItem = produto.Preco * dto.Produto.Quantidade
-            };
-
-            carrinho.CarrinhoItens.Add(item);
-
-            _repositoryCarrinho.Add(carrinho);
+            _appService.AdicionarProduto(dto);
 
             return Ok();
         }

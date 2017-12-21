@@ -9,19 +9,8 @@ using System.Web;
 
 namespace Interface.Infra.Repository
 {
-    public class PedidoItensRepository : IDisposable
+    public class PedidoItensRepository : GenericRepository<PedidoItens>
     {
-        private Model _entities;
 
-
-        public PedidoItensRepository()
-        {
-            _entities = new Model();
-        }
-
-        public void Dispose()
-        {
-            _entities.Dispose();
-        }
     }
 }

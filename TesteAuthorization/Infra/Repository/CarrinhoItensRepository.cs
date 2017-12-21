@@ -9,24 +9,11 @@ using System.Web;
 
 namespace Interface.Infra.Repository
 {
-    public class CarrinhoItensRepository : IDisposable
+    public class CarrinhoItensRepository : GenericRepository<CarrinhoItens>
     {
-        private Model _entities;
-
-
-        public CarrinhoItensRepository()
+        public IQueryable<CarrinhoItens> GetByCarrinhoProduto(int idCarrinho, int idProduto)
         {
-            _entities = new Model();
-        }
-
-        public void Add(CarrinhoItens db)
-        {
-            _entities.CarrinhoItens.Add(db);
-        }
-
-        public void Dispose()
-        {
-            _entities.Dispose();
+            return _entities.CarrinhoItens.Where(x => x.IdCarrinho == idCarrinho && x.IdProduto == idProduto);
         }
     }
 }

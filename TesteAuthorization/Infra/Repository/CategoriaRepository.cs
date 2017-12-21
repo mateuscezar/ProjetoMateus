@@ -9,19 +9,8 @@ using System.Web;
 
 namespace Interface.Infra.Repository
 {
-    public class CategoriaRepository : IDisposable
+    public class CategoriaRepository : GenericRepository<Categoria>
     {
-        private Model _entities;
 
-
-        public CategoriaRepository()
-        {
-            _entities = new Model();
-        }
-
-        public void Dispose()
-        {
-            _entities.Dispose();
-        }
     }
 }

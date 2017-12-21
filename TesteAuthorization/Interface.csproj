@@ -206,13 +206,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="scripts\ai.0.15.0-build58334.js" />
-    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AddAuthorizationHeader.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -220,7 +219,6 @@
     <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\TesteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +226,8 @@
     <Compile Include="Infra\Model.cs" />
     <Compile Include="Infra\Repository\CarrinhoItensRepository.cs" />
     <Compile Include="Infra\Repository\CategoriaRepository.cs" />
+    <Compile Include="Infra\Repository\GenericRepository.cs" />
+    <Compile Include="Infra\Repository\IGenericRepository.cs" />
     <Compile Include="Infra\Repository\PedidoRepository.cs" />
     <Compile Include="Infra\Repository\PedidoItensRepository.cs" />
     <Compile Include="Infra\Repository\ProdutoCategoriaRepository.cs" />
@@ -237,6 +237,10 @@
     <Compile Include="Infra\Repository\AuthRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Service\ProdutoApplicationService.cs" />
+    <Compile Include="Service\PedidoApplicationService.cs" />
+    <Compile Include="Service\CarrinhoApplicationService.cs" />
+    <Compile Include="Service\ClienteApplicationService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
