@@ -9,6 +9,6 @@ namespace Domain.Dto
     public class CarrinhoDto
     {
         public int IdCliente { get; set; }
-        public List<ProdutoDto> Produtos { get; set; }
+        public ProdutoDto Produto { get; set; }
     }
 }

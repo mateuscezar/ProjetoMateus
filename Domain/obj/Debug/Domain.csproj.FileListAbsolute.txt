@@ -30,3 +30,13 @@ C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Do
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\obj\Debug\Domain.dll
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\obj\Debug\Domain.pdb
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\Domain.dll.config
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\Domain.dll
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\Domain.pdb
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\EntityFramework.dll
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\EntityFramework.xml
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\obj\Debug\Domain.dll
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\obj\Debug\Domain.pdb

@@ -1,4 +1,4 @@
-namespace TesteAuthorization.Infra
+namespace Interface.Infra
 {
     using System;
     using System.Data.Entity;

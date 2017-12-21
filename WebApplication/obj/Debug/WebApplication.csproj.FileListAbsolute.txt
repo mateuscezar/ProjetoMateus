@@ -18,3 +18,9 @@ C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\We
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\WebApplication\bin\WebApplication.dll.config
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\WebApplication\bin\WebApplication.dll
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\WebApplication\bin\WebApplication.pdb
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\WebApplication\obj\Debug\WebApplication.pdb

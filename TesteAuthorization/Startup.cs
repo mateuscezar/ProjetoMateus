@@ -3,10 +3,11 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using System;
 using System.Web.Http;
-using TesteAuthorization.Providers;
+using System.Web.Mvc;
+using Interface.Providers;
 
-[assembly: OwinStartup(typeof(TesteAuthorization.API.Startup))]
-namespace TesteAuthorization.API
+[assembly: OwinStartup(typeof(Interface.Startup))]
+namespace Interface
 {
     public class Startup
     {
@@ -14,9 +15,9 @@ namespace TesteAuthorization.API
         {
             ConfigureOAuth(app);
             HttpConfiguration config = new HttpConfiguration();
-            WebApiConfig.Register(config);
+            //WebApiConfig.Register(config);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
-            app.UseWebApi(config);
+            //app.UseWebApi(config);
         }
 
         public void ConfigureOAuth(IAppBuilder app)

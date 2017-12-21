@@ -2,9 +2,9 @@
 using Microsoft.Owin.Security.OAuth;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using TesteAuthorization.Infra.Repository;
+using Interface.Infra.Repository;
 
-namespace TesteAuthorization.Providers
+namespace Interface.Providers
 {
     public class SimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {

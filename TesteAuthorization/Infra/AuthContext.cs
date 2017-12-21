@@ -6,7 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace TesteAuthorization.Infra
+namespace Interface.Infra
 {
     public class AuthContext : IdentityDbContext<IdentityUser>
     {

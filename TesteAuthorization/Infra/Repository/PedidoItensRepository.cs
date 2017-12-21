@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace TesteAuthorization.Infra.Repository
+namespace Interface.Infra.Repository
 {
     public class PedidoItensRepository : IDisposable
     {

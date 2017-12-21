@@ -2,9 +2,9 @@
 using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
 using System.Web.Http;
-using TesteAuthorization.Infra.Repository;
+using Interface.Infra.Repository;
 
-namespace TesteAuthorization.Controllers
+namespace Interface.Controllers
 {
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
 
-namespace TesteAuthorization
+namespace Interface
 {
     public static class WebApiConfig
     {
@@ -21,6 +21,8 @@ namespace TesteAuthorization
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            SwaggerConfig.Register();
 
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
