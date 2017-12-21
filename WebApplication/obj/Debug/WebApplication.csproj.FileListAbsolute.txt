@@ -1,0 +1,13 @@
+D:\Setup-Web-Api-Project-master\Setup-Web-Api-Project-master\WebApplication\bin\WebApplication.dll.config
+D:\Setup-Web-Api-Project-master\Setup-Web-Api-Project-master\WebApplication\bin\WebApplication.dll
+D:\Setup-Web-Api-Project-master\Setup-Web-Api-Project-master\WebApplication\bin\WebApplication.pdb
+D:\Setup-Web-Api-Project-master\Setup-Web-Api-Project-master\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
+D:\Setup-Web-Api-Project-master\Setup-Web-Api-Project-master\WebApplication\obj\Debug\WebApplication.dll
+D:\Setup-Web-Api-Project-master\Setup-Web-Api-Project-master\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\bin\WebApplication.dll.config
+C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\bin\WebApplication.dll
+C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\bin\WebApplication.pdb
+C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
