@@ -11,3 +11,10 @@ C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorizati
 C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\obj\Debug\WebApplication.pdb
 C:\Users\User\Desktop\Authorization-master\Authorization-master\TesteAuthorization\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\bin\WebApplication.dll.config
+C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\bin\WebApplication.dll
+C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\bin\WebApplication.pdb
+C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\WebApplication\obj\Debug\WebApplication.pdb
