@@ -15,7 +15,7 @@ namespace Interface.Infra.Repository
 
         public IQueryable<Carrinho> GetByIdCliente(int idCliente)
         {
-            return _entities.Carrinho.Where(x => x.IdCliente == idCliente);
+            return _entities.Carrinho.Include(x => x.Cliente).Where(x => x.IdCliente == idCliente);
         }
 
         public IQueryable<Carrinho> GetById(int idCarrinho)

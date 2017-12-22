@@ -3,7 +3,7 @@
     <li class="breadcrumb-item">Categoria</li>
     <li class="breadcrumb-item active">Lista</li>
 </ol>
-<span ng-click="new()">Novo</span>
+<button type="button" class="btn btn-primary glyphicon glyphicon-plus" ng-click="new()" style="float:right"> Novo</button>
 <table class="table">
     <thead>
         <tr>
@@ -18,7 +18,7 @@
             <th>{{item.nome}}</th>
             <td>{{item.ativo ? 'Sim' : 'Não'}}</td>
             <td>{{item.dataCadastro | date: 'dd/MM/yyyy' }}</td>
-            <td><span ng-click="update(item.id)">Editar</span> &nbsp; <span ng-click="remove(item.id)">Excluir</span></td>
+            <td><span ng-click="update(item.id)"> Editar</span> &nbsp; <span ng-click="remove(item.id)"> Excluir</span></td>
         </tr>
     </tbody>
 </table>

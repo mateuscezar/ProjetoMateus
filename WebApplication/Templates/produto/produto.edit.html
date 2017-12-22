@@ -3,3 +3,29 @@
     <li class="breadcrumb-item">Produto</li>
     <li class="breadcrumb-item active">Edição</li>
 </ol>
+
+<form>
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" ng-model="Dto.nome" id="nome" placeholder="Nome">
+    </div>
+    <div class="form-group">
+        <label for="nome">Descrição</label>
+        <input type="text" class="form-control" ng-model="Dto.descricao" id="nome" placeholder="Nome">
+    </div>
+    <div class="form-group">
+        <label for="email">Preço</label>
+        <input type="number" ng-model="Dto.preco" step="0.01" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="email">Preço Promocional</label>
+        <input type="number" ng-model="Dto.precoPromocional" step="0.01" class="form-control" />
+    </div>
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="checkbox" ng-model="Dto.ativo" class="form-check-input">
+            Ativo
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="update()">Alterar</button>
+</form>

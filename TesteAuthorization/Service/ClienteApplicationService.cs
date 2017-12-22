@@ -27,6 +27,17 @@ namespace Interface.Service
             }).ToList();
         }
 
+        public ClienteDto GetById(int id)
+        {
+            return _repository.GetById(id).Select(x => new ClienteDto
+            {
+                Nome = x.Nome,
+                Email = x.Email,
+                DataCadastro = x.DataCadastro,
+                Id = x.Id
+            }).FirstOrDefault();
+        }
+
         public void Post(ClientePostDto dto)
         {
             if (dto == null)

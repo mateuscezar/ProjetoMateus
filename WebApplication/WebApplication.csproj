@@ -62,9 +62,12 @@
     <Content Include="Content\custom.css" />
     <Content Include="Images\load.gif" />
     <Content Include="Scripts\Controllers\categoria\categoriaListaController.js" />
+    <Content Include="Scripts\Controllers\categoria\categoriaEditController.js" />
     <Content Include="Scripts\Controllers\categoria\categoriaNewController.js" />
+    <Content Include="Scripts\Controllers\cliente\clienteEditController.js" />
     <Content Include="Scripts\Controllers\cliente\clienteNewController.js" />
     <Content Include="Scripts\Controllers\cliente\clienteListaController.js" />
+    <Content Include="Scripts\Controllers\produto\produtoEditController.js" />
     <Content Include="Scripts\Controllers\produto\produtoNewController.js" />
     <Content Include="Scripts\Controllers\produto\produtoListaController.js" />
     <Content Include="Scripts\Directives\LoadingDirective.js" />

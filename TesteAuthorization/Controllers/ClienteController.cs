@@ -37,6 +37,13 @@ namespace Interface.Controllers
         }
 
         [Authorize]
+        [Route("{id:int}")]
+        public IHttpActionResult GetById(int id)
+        {
+            return Ok(_appService.GetById(id));
+        }
+
+        [Authorize]
         [HttpPut]
         [Route("")]
         public IHttpActionResult Put(ClienteDto dto)

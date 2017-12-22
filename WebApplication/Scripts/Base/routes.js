@@ -26,6 +26,12 @@ routes.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
             controller: 'CategoriaNewController',
             controllerAs: 'categorianew'
         })
+        .state('categoriaedit', {
+            url: '/categoria/edit/:id',
+            templateUrl: 'Templates/categoria/categoria.edit.html',
+            controller: 'CategoriaEditController',
+            controllerAs: 'categoriaedit'
+        })
         .state('cliente', {
             url: '/cliente',
             templateUrl: 'Templates/cliente/cliente.lista.html',
@@ -38,6 +44,12 @@ routes.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
             controller: 'ClienteNewController',
             controllerAs: 'clientenew'
         })
+        .state('clienteedit', {
+            url: '/cliente/edit/:id',
+            templateUrl: 'Templates/cliente/cliente.edit.html',
+            controller: 'ClienteEditController',
+            controllerAs: 'clienteedit'
+        })
         .state('produto', {
             url: '/produto',
             templateUrl: 'Templates/produto/produto.lista.html',
@@ -49,6 +61,12 @@ routes.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
             templateUrl: 'Templates/produto/produto.new.html',
             controller: 'ProdutoNewController',
             controllerAs: 'produtonew'
+        })
+        .state('produtoedit', {
+            url: '/produto/edit/:id',
+            templateUrl: 'Templates/produto/produto.edit.html',
+            controller: 'ProdutoEditController',
+            controllerAs: 'produtoedit'
         })
         .state('accessdenied', {
             url: '/accessdenied',

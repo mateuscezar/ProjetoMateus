@@ -25,6 +25,42 @@ namespace Interface.Service
             _repositoryCarrinhoItens = new CarrinhoItensRepository();
         }
 
+        public CarrinhoDto GetByCliente(int id)
+        {
+            var carrinho = _repositoryCarrinho.GetByIdCliente(id).FirstOrDefault();
+
+            if (carrinho == null)
+                throw new Exception("Carrinho não existe.");
+
+            var carrinhoItens = _repositoryCarrinhoItens.GetByCarrinho(id).ToList();
+
+            List<PedidoItemDto> listDto = new List<PedidoItemDto>();
+            foreach (var item in carrinhoItens)
+            {
+                var produto = _repositoryProduto.GetById(item.IdProduto).FirstOrDefault();
+
+                PedidoItemDto itemDto = new PedidoItemDto {
+                    NomeProduto = produto.Nome,
+                    Quantidade = item.Quantidade,
+                    ValorTotal = item.ValorTotalItem,
+                    ValorUnidade = item.ValorUnitario
+                };
+
+                listDto.Add(itemDto);
+            }
+
+            return new CarrinhoDto
+            {
+                IdCliente = id,
+                NomeCliente = carrinho.Cliente.Nome,
+                Id = carrinho.Id,
+                DataCadastro = carrinho.DataCadastro,
+                Total = carrinho.Total,
+                Itens = listDto
+            };
+
+        }
+
         public void AdicionarProduto(AdicionarCarrinhoDto dto)
         {
             Produto produto = ValidaProduto(dto.IdProduto);

@@ -11,10 +11,10 @@
         }, function (error) { AlertService.addError(error.message); });
 
         $scope.update = function (id) {
-            alert('update: ' + id);
+            $state.go('produtoedit', { id: id });
         };
 
-        $scope.new = function (id) {
+        $scope.new = function () {
             $state.go('produtonew');
         };
 

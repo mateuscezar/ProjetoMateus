@@ -20,14 +20,24 @@ namespace Interface.Controllers
         }
 
         [Authorize]
+        [HttpGet]
         [Route("{id:int}")]
-        public IHttpActionResult Get(int id)
+        public IHttpActionResult GetById(int id)
         {
             return Ok(_appService.GetById(id));
         }
 
         [Authorize]
+        [HttpGet]
+        [Route("")]
+        public IHttpActionResult GetAll()
+        {
+            return Ok(_appService.GetAll());
+        }
+
+        [Authorize]
         [HttpPost]
+        [Route("")]
         public IHttpActionResult Post(PedidoPostDto dto)
         {
             _appService.Post(dto);

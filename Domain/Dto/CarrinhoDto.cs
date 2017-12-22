@@ -8,7 +8,11 @@ namespace Domain.Dto
 {
     public class CarrinhoDto
     {
+        public int Id { get; set; }
+        public DateTime DataCadastro { get; set; }
+        public double Total { get; set; }
         public int IdCliente { get; set; }
-        public ProdutoDto Produto { get; set; }
+        public string NomeCliente { get; set; }
+        public List<PedidoItemDto> Itens { get; set; }
     }
 }

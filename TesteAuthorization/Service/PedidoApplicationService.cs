@@ -25,7 +25,28 @@ namespace Interface.Service
             _repositoryProduto = new ProdutoRepository();
         }
 
+        public List<PedidoDto> GetAll()
+        {
+            var listDb = _repository.GetAll().ToList();
+
+            List<PedidoDto> listaRetorno = new List<PedidoDto>();
+            foreach (var pedidodb in listDb)
+            {
+                PedidoDto pedido = GetPedidoDtoById(pedidodb.Id);
+                listaRetorno.Add(pedido);
+            }
+
+            return listaRetorno;
+        }
+
         public PedidoDto GetById(int id)
+        {
+            PedidoDto pedido = GetPedidoDtoById(id);
+
+            return pedido;
+        }
+
+        private PedidoDto GetPedidoDtoById(int id)
         {
             var pedido = _repository.GetById(id).Select(x => new PedidoDto
             {
@@ -52,7 +73,6 @@ namespace Interface.Service
             }
 
             pedido.Itens = listaItensDto;
-
             return pedido;
         }
 

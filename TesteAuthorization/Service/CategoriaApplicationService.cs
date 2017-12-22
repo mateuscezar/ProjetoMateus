@@ -43,6 +43,16 @@ namespace Interface.Service
             _repository.Commit();
         }
 
+        public CategoriaDto GetById(int id)
+        {
+            return _repository.GetById(id).Select(x => new CategoriaDto {
+                Nome = x.Nome,
+                Ativo = x.Ativo,
+                DataCadastro = x.DataCadastro,
+                Id = x.Id
+            }).FirstOrDefault();
+        }
+
         public void Edit(CategoriaDto dto)
         {
             Categoria categoria = ValidaCategoria(dto.Id);

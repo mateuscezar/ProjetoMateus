@@ -46,6 +46,19 @@ namespace Interface.Service
             _repository.Commit();
         }
 
+        public ProdutoDto GetById(int id)
+        {
+            return _repository.GetById(id).Select(x => new ProdutoDto
+            {
+                Nome = x.Nome,
+                Ativo = x.Ativo,
+                Descricao = x.Descricao,
+                Preco = x.Preco,
+                PrecoPromocional = x.PrecoPromocional,
+                Id = x.Id
+            }).FirstOrDefault();
+        }
+
         public void Edit(ProdutoDto dto)
         {
             Produto produto = ValidaProduto(dto.Id);

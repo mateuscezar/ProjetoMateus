@@ -38,3 +38,4 @@ C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\EntityFramewor
 C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\obj\Debug\Domain.dll
 C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\obj\Debug\Domain.pdb
+C:\Users\mcmsilva\Documents\GitHub\ProjetoMateus\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
