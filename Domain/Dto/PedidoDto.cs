@@ -12,8 +12,8 @@ namespace Domain.Dto
 
         public double Valor { get; set; }
 
-        public int IdCarrinho { get; set; }
-
         public DateTime DataCadastro { get; set; }
+
+        public List<PedidoItemDto> Itens { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace Domain.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Produto()
         {
-            CarrinhoItens = new HashSet<CarrinhoItens>();
+            //CarrinhoItens = new HashSet<CarrinhoItens>();
             ProdutoCategoria = new HashSet<ProdutoCategoria>();
         }
 
@@ -32,8 +32,8 @@ namespace Domain.Models
 
         public double? PrecoPromocional { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CarrinhoItens> CarrinhoItens { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<CarrinhoItens> CarrinhoItens { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProdutoCategoria> ProdutoCategoria { get; set; }

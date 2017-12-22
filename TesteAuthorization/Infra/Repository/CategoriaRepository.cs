@@ -11,6 +11,9 @@ namespace Interface.Infra.Repository
 {
     public class CategoriaRepository : GenericRepository<Categoria>
     {
-
+        public IQueryable<Categoria> GetById(int idCategoria)
+        {
+            return _entities.Categoria.Where(x => x.Id == idCategoria);
+        }
     }
 }

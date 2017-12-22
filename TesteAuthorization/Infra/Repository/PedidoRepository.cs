@@ -17,5 +17,10 @@ namespace Interface.Infra.Repository
         {
             return _entities.Pedido.Include(x => x.PedidoItens).Where(x => x.Id == id);
         }
+
+        public IQueryable<Pedido> GetByIdCarrinho(int idCarrinho)
+        {
+            return _entities.Pedido.Where(x => x.IdCarrinho == idCarrinho);
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace Domain.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Carrinho()
         {
-            CarrinhoItens = new HashSet<CarrinhoItens>();
+            //CarrinhoItens = new HashSet<CarrinhoItens>();
         }
 
         [Key]
@@ -27,7 +27,7 @@ namespace Domain.Models
 
         public virtual Cliente Cliente { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CarrinhoItens> CarrinhoItens { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<CarrinhoItens> CarrinhoItens { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using Interface.Infra.Repository;
 using Interface.Service;
+using Domain.Dto;
 
 namespace Interface.Controllers
 {
@@ -23,6 +24,14 @@ namespace Interface.Controllers
         public IHttpActionResult Get(int id)
         {
             return Ok(_appService.GetById(id));
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IHttpActionResult Post(PedidoPostDto dto)
+        {
+            _appService.Post(dto);
+            return Ok();
         }
 
     }

@@ -17,12 +17,17 @@ namespace Interface.Service
             _repository = new ClienteRepository();
         }
 
-        public List<Cliente> GetAll()
+        public List<ClienteDto> GetAll()
         {
-            return _repository.GetAll().ToList();
+            return _repository.GetAll().Select(x => new ClienteDto {
+                DataCadastro = x.DataCadastro,
+                Email = x.Email,
+                Nome = x.Nome,
+                Id = x.Id
+            }).ToList();
         }
 
-        public void Post(ClienteDto dto)
+        public void Post(ClientePostDto dto)
         {
             if (dto == null)
                 throw new Exception("DTO Inválido.");
@@ -34,6 +39,34 @@ namespace Interface.Service
             };
 
             _repository.Add(db);
+            _repository.Commit();
+        }
+
+        public void Edit(ClienteDto dto)
+        {
+            Cliente cliente = ValidaCliente(dto.Id);
+
+            cliente.Nome = dto.Nome;
+            cliente.Email = dto.Email;
+
+            _repository.Edit(cliente);
+            _repository.Commit();
+        }
+
+        private Cliente ValidaCliente(int idCliente)
+        {
+            var cliente = _repository.GetById(idCliente).FirstOrDefault();
+
+            if (cliente == null)
+                throw new Exception("Cliente inválido.");
+            return cliente;
+        }
+
+        public void Delete(int id)
+        {
+            Cliente cliente = ValidaCliente(id);
+
+            _repository.Delete(cliente);
             _repository.Commit();
         }
     }

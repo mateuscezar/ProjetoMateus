@@ -26,7 +26,6 @@ C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Do
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\bin\Debug\EntityFramework.xml
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\obj\Debug\Domain.dll
 C:\Users\User\Desktop\Authorization-master\Authorization-master\ProjetoMateus\Domain\obj\Debug\Domain.pdb

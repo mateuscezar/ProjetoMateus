@@ -14,6 +14,42 @@ routes.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
             controller: 'HomeController',
             controllerAs: 'home'
         })
+        .state('categoria', {
+            url: '/categoria',
+            templateUrl: 'Templates/categoria/categoria.lista.html',
+            controller: 'CategoriaListaController',
+            controllerAs: 'categoria'
+        })
+        .state('categorianew', {
+            url: '/categoria/new',
+            templateUrl: 'Templates/categoria/categoria.new.html',
+            controller: 'CategoriaNewController',
+            controllerAs: 'categorianew'
+        })
+        .state('cliente', {
+            url: '/cliente',
+            templateUrl: 'Templates/cliente/cliente.lista.html',
+            controller: 'ClienteListaController',
+            controllerAs: 'cliente'
+        })
+        .state('clientenew', {
+            url: '/cliente/new',
+            templateUrl: 'Templates/cliente/cliente.new.html',
+            controller: 'ClienteNewController',
+            controllerAs: 'clientenew'
+        })
+        .state('produto', {
+            url: '/produto',
+            templateUrl: 'Templates/produto/produto.lista.html',
+            controller: 'ProdutoListaController',
+            controllerAs: 'produto'
+        })
+        .state('produtonew', {
+            url: '/produto/new',
+            templateUrl: 'Templates/produto/produto.new.html',
+            controller: 'ProdutoNewController',
+            controllerAs: 'produtonew'
+        })
         .state('accessdenied', {
             url: '/accessdenied',
             templateUrl: 'Templates/accessDenied.html',

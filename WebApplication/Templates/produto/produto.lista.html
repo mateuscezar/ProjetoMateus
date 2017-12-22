@@ -1,0 +1,28 @@
+﻿<ol class="breadcrumb">
+    <li class="breadcrumb-item">Projeto Mateus</li>
+    <li class="breadcrumb-item">Produto</li>
+    <li class="breadcrumb-item active">Lista</li>
+</ol>
+<span ng-click="new()">Novo</span>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Descricao</th>
+            <th scope="col">Ativo</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Preço Promocional</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in Lista">
+            <th>{{item.nome}}</th>
+            <td>{{item.descricao}}</td>
+            <td>{{item.ativo ? 'Sim' : 'Não'}}</td>
+            <td>{{item.preco | currency:'R$'}}</td>
+            <td>{{item.precoPromocional | currency:'R$'}}</td>
+            <td><span ng-click="update(item.id)">Editar</span> &nbsp; <span ng-click="remove(item.id)">Excluir</span></td>
+        </tr>
+    </tbody>
+</table>

@@ -15,5 +15,10 @@ namespace Interface.Infra.Repository
         {
             return _entities.CarrinhoItens.Where(x => x.IdCarrinho == idCarrinho && x.IdProduto == idProduto);
         }
+
+        public IQueryable<CarrinhoItens> GetByCarrinho(int idCarrinho)
+        {
+            return _entities.CarrinhoItens.Where(x => x.IdCarrinho == idCarrinho);
+        }
     }
 }

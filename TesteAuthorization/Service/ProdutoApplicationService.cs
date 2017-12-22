@@ -45,5 +45,36 @@ namespace Interface.Service
             _repository.Add(db);
             _repository.Commit();
         }
+
+        public void Edit(ProdutoDto dto)
+        {
+            Produto produto = ValidaProduto(dto.Id);
+
+            produto.Ativo = dto.Ativo;
+            produto.Descricao = dto.Descricao;
+            produto.Nome = dto.Nome;
+            produto.Preco = dto.Preco;
+            produto.PrecoPromocional = dto.PrecoPromocional;
+
+            _repository.Edit(produto);
+            _repository.Commit();
+        }
+
+        private Produto ValidaProduto(int idProduto)
+        {
+            var produto = _repository.GetById(idProduto).FirstOrDefault();
+
+            if (produto == null)
+                throw new Exception("Produto inválido.");
+            return produto;
+        }
+
+        public void Delete(int id)
+        {
+            Produto produto = ValidaProduto(id);
+
+            _repository.Delete(produto);
+            _repository.Commit();
+        }
     }
 }

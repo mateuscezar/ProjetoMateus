@@ -28,11 +28,29 @@ namespace Interface.Controllers
 
         [Authorize]
         [HttpPost]
-        [Route("Novo")]
+        [Route("")]
         public IHttpActionResult Post(ProdutoDto dto)
         {
             _appService.Post(dto);
 
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpPut]
+        [Route("")]
+        public IHttpActionResult Put(ProdutoDto dto)
+        {
+            _appService.Edit(dto);
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpDelete]
+        [Route("{id:int}")]
+        public IHttpActionResult Delete(int id)
+        {
+            _appService.Delete(id);
             return Ok();
         }
 

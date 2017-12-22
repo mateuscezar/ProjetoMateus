@@ -9,14 +9,25 @@
 
 <body ng-controller="IndexController as index" ng-cloak>
 
+
     <nav class="navbar navbar-default" ng-if="index.currentUser && !onLoginScreen">
-        <ul class="nav navbar-nav navbar-right" style="margin-right:10px">
-            <li>
-                <button class="btn btn-default navbar-btn" ng-click="index.logout()">
-                    Logout <strong>{{index.currentUser.user}}</strong>
-                </button>
-            </li>
-        </ul>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Projeto Mateus</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li ng-click="goCategoria()"><a>Categoria</a></li>
+                <li ng-click="goCliente()"><a>Cliente</a></li>
+                <li ng-click="goProduto()"><a>Produto</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="margin-right:10px">
+                <li>
+                    <button class="btn btn-default navbar-btn" ng-click="index.logout()">
+                        Logout <strong>{{index.currentUser.user}}</strong>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <div id="loaderDiv" loader>
@@ -53,6 +64,10 @@
     <script src="Scripts/services/UserService.js"></script>
     <script src="Scripts/Services/LoadingInterceptor.js"></script>
 
+    <script src="Scripts/services/CategoriaService.js"></script>
+    <script src="Scripts/services/ClienteService.js"></script>
+    <script src="Scripts/services/ProdutoService.js"></script>
+
     <!-- Directives -->
     <script src="Scripts/Directives/LoadingDirective.js"></script>
 
@@ -61,5 +76,13 @@
     <script src="Scripts/Controllers/IndexController.js"></script>
     <script src="Scripts/Controllers/HomeController.js"></script>
     <script src="Scripts/Controllers/AccessDeniedController.js"></script>
+
+    <script src="Scripts/Controllers/categoria/categoriaListaController.js"></script>
+    <script src="Scripts/Controllers/categoria/categoriaNewController.js"></script>
+    <script src="Scripts/Controllers/cliente/clienteListaController.js"></script>
+    <script src="Scripts/Controllers/cliente/clienteNewController.js"></script>
+    <script src="Scripts/Controllers/produto/produtoListaController.js"></script>
+    <script src="Scripts/Controllers/produto/produtoNewController.js"></script>
+
 </body>
 </html>

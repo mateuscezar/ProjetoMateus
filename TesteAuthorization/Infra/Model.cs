@@ -24,11 +24,11 @@ namespace Interface.Infra
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Carrinho>()
-                .HasMany(e => e.CarrinhoItens)
-                .WithRequired(e => e.Carrinho)
-                .HasForeignKey(e => e.IdCarrinho)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<Carrinho>()
+            //    .HasMany(e => e.CarrinhoItens)
+            //    .WithRequired(e => e.Carrinho)
+            //    .HasForeignKey(e => e.IdCarrinho)
+            //    .WillCascadeOnDelete(false);
 
             //modelBuilder.Entity<CarrinhoItens>()
             //    .HasMany(e => e.Pedido)
@@ -74,11 +74,11 @@ namespace Interface.Infra
                 .Property(e => e.Descricao)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Produto>()
-                .HasMany(e => e.CarrinhoItens)
-                .WithRequired(e => e.Produto)
-                .HasForeignKey(e => e.IdProduto)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<Produto>()
+            //    .HasMany(e => e.CarrinhoItens)
+            //    .WithRequired(e => e.Produto)
+            //    .HasForeignKey(e => e.IdProduto)
+            //    .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Produto>()
                 .HasMany(e => e.ProdutoCategoria)

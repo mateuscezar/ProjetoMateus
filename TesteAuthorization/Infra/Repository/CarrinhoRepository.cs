@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using System.Data.Entity;
 
 namespace Interface.Infra.Repository
 {
@@ -15,6 +16,11 @@ namespace Interface.Infra.Repository
         public IQueryable<Carrinho> GetByIdCliente(int idCliente)
         {
             return _entities.Carrinho.Where(x => x.IdCliente == idCliente);
+        }
+
+        public IQueryable<Carrinho> GetById(int idCarrinho)
+        {
+            return _entities.Carrinho.Where(x => x.Id == idCarrinho);
         }
     }
 }

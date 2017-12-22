@@ -46,36 +46,6 @@ namespace Interface.Service
                 isEdit = false;
             }
 
-            //List<CarrinhoItens> itens = new List<CarrinhoItens>();
-
-            //if(carrinho.Id > 0)
-            //    itens = _repositoryCarrinhoItens.GetByCarrinhoProduto(carrinho.Id, dto.IdProduto).ToList();
-
-            CarrinhoItens item = null;
-            if (carrinho.Id > 0 && _repositoryCarrinhoItens.GetByCarrinhoProduto(carrinho.Id, dto.IdProduto).Any())
-            {
-                item = _repositoryCarrinhoItens.GetByCarrinhoProduto(carrinho.Id, dto.IdProduto).FirstOrDefault();
-                item.Quantidade++;
-                item.ValorTotalItem = (produto.PrecoPromocional ?? produto.Preco) * item.Quantidade;
-                item.ValorUnitario = produto.Preco;
-
-                _repositoryCarrinhoItens.Edit(item);
-                _repositoryCarrinhoItens.Commit();
-            }
-            else
-            {
-                item = new CarrinhoItens
-                {
-                    Produto = produto,
-                    Carrinho = carrinho,
-                    Pedido = null,
-                    DataCadastro = DateTime.Now,
-                    Quantidade = 1,
-                    ValorUnitario = produto.Preco,
-                    ValorTotalItem = (produto.PrecoPromocional ?? produto.Preco) * item.Quantidade
-                };
-            }
-            
             carrinho.Total += produto.PrecoPromocional ?? produto.Preco;
 
             if (isEdit)
@@ -84,6 +54,34 @@ namespace Interface.Service
                 _repositoryCarrinho.Add(carrinho);
 
             _repositoryCarrinho.Commit();
+
+            CarrinhoItens item = null;
+            if (carrinho.Id > 0 && _repositoryCarrinhoItens.GetByCarrinhoProduto(carrinho.Id, dto.IdProduto).Any())
+            {
+                item = _repositoryCarrinhoItens.GetByCarrinhoProduto(carrinho.Id, dto.IdProduto).FirstOrDefault();
+                item.Quantidade++;
+                item.ValorTotalItem = (produto.PrecoPromocional ?? produto.Preco) * item.Quantidade;
+                item.ValorUnitario = (produto.PrecoPromocional ?? produto.Preco);
+
+                _repositoryCarrinhoItens.Edit(item);
+                _repositoryCarrinhoItens.Commit();
+            }
+            else
+            {
+                item = new CarrinhoItens
+                {
+                    IdProduto = dto.IdProduto,
+                    IdCarrinho = carrinho.Id,
+                    DataCadastro = DateTime.Now,
+                    Quantidade = 1,
+                    ValorUnitario = (produto.PrecoPromocional ?? produto.Preco),
+                    ValorTotalItem = (produto.PrecoPromocional ?? produto.Preco)
+                };
+
+                _repositoryCarrinhoItens.Add(item);
+                _repositoryCarrinhoItens.Commit();
+            }
+            
         }
 
         private Produto ValidaProduto(int idProduto)

@@ -14,6 +14,18 @@
             $rootScope.onLoginScreen = onLoginScreen;
         };
 
+        $rootScope.goCategoria = function () {
+            $state.go('categoria');
+        };
+
+        $rootScope.goCliente = function () {
+            $state.go('cliente');
+        };
+
+        $rootScope.goProduto = function () {
+            $state.go('produto');
+        };
+
         function logout() {
             //TODO: Call a backend service to invalidate token
             index.currentUser = UserService.setCurrentUser(null);

@@ -50,7 +50,11 @@
   <ItemGroup>
     <Compile Include="Dto\AdicionarCarrinhoDto.cs" />
     <Compile Include="Dto\CarrinhoDto.cs" />
+    <Compile Include="Dto\CategoriaDto.cs" />
+    <Compile Include="Dto\ClientePostDto.cs" />
     <Compile Include="Dto\ClienteDto.cs" />
+    <Compile Include="Dto\PedidoItemDto.cs" />
+    <Compile Include="Dto\PedidoPostDto.cs" />
     <Compile Include="Dto\PedidoDto.cs" />
     <Compile Include="Dto\ProdutoDto.cs" />
     <Compile Include="Models\Carrinho.cs" />
